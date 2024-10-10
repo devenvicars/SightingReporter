@@ -1,0 +1,12 @@
+@{
+    Layout = "_EmptyLayout";
+}
+
+<div class="row">
+    <div class="col shadow p-4 m-2">
+        @await Html.PartialAsync("_RegisterForm")
+    </div>
+    <div class="col shadow p-4 m-2">
+        @await Html.PartialAsync("_LoginForm")
+    </div>
+</div>

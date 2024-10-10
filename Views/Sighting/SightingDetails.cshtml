@@ -1,0 +1,22 @@
+@model Sighting
+
+<h1>@Model.Title</h1>
+
+<div class="row">
+    <div class="col">
+        <h3>Date: @Model.FoundDate.ToString("MMM dd, yyyy")</h3>
+        <h3>Description</h3>
+        <p>@Model.Description</p>
+    </div>
+
+    <div class="col">
+        <h3>Believed By:</h3>
+        <ul>
+            @foreach (UserSightingBeliever b in Model.Believers)
+            {
+                <li>@b.User.UserName</li>
+            }
+        </ul>
+    </div>
+
+</div>
